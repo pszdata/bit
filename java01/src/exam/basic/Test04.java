@@ -37,7 +37,6 @@ public class Test04
     char c5 = '\uAC00';
     
     System.out.println("\uAC00");
-    System.out.println("\u");
 
 	
 	}

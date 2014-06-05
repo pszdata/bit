@@ -3,6 +3,9 @@
  *	- byte 끼리의 연산결과도 : int 
  *	- short 끼리의 연산결과 : int
  *	- long 끼리의 연산 결과 : long
+ *	- 서로 다른 타입의 데이터를 연산할 때 다음의 규칙에 따라 
+ *		데이터 형을 일치시켜서 연산을 수행한다.
+ *		(암시적 형변환)
  *		{byte, short, char} => int > long > float > double
  *
 */
@@ -15,7 +18,7 @@ public class Test06
 	{
 		byte b1 = 56; // 상수인 경우 변수에 저장할 수 있다면 승인한다.
 		//byte b2 = 127; // 상수 128을 b2 변수에 저장할 수 없다. 에러!
-		System.out.println(b2);
+		System.out.println(b1);
 		// byte 끼리의 연산 결과는 int 이다.
 		
 		byte b2 = 56;
@@ -64,7 +67,15 @@ public class Test06
 		 * 둘 중 하나의 값을 다른 쪽에 맞추는 것.
 		 *  - 암시적 형변환의 규칙
 		 *  	{byte, short, char} > int > long > float > double
+		 * 											long, float 연산할때 값 절사 주의 
+		 * 
 		*/
+		
+		int x = 10;
+		x = ++x;
+		System.out.println(x);
+		
+		
 	}
 
 };
